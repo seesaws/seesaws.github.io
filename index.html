@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seesaw — Full Stack Developer</title>
+  <title>Seesaw — Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
 
   <!-- Background layers -->
   <canvas id="starfield"></canvas>
@@ -42,7 +44,7 @@
         <div class="hero-role">
           <span id="typewriter"></span><span class="cursor">|</span>
         </div>
-        <p class="hero-desc">Building elegant solutions at the intersection of design and engineering.</p>
+        <p class="hero-desc">Building elegant solutions at the intersection of design and engineering · Spring Boot / Spring Cloud · Microservices · Distributed Systems</p>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">View My Work</a>
           <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -66,8 +68,8 @@
           </div>
           <div class="about-text">
             <h2 class="section-title">About Me</h2>
-            <p>I'm a full-stack developer passionate about crafting performant, accessible web experiences. I thrive at the boundary between clean code and thoughtful design — turning complex problems into intuitive products.</p>
-            <p>When I'm not shipping features, you'll find me exploring open-source projects, contributing to the community, or stargazing (literally).</p>
+            <p>Java 后端开发者，专注于 Spring Boot / Spring Cloud 微服务架构，有丰富的分布式系统设计与落地经验，熟悉高并发场景下的性能调优与稳定性保障。</p>
+            <p>不写代码的时候，你大概能在 JVM 源码、开源社区或者星空下找到我。</p>
             <div class="stats-row">
               <div class="stat" data-count="3">
                 <span class="stat-number">3+</span>
@@ -96,25 +98,25 @@
 
           <div class="skill-card">
             <div class="skill-icon">⬡</div>
-            <h3>Frontend</h3>
+            <h3>Backend</h3>
             <ul class="tag-list">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Next.js</li>
-              <li>Vue 3</li>
-              <li>CSS / Tailwind</li>
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>Spring Cloud</li>
+              <li>MyBatis</li>
+              <li>Maven / Gradle</li>
             </ul>
           </div>
 
           <div class="skill-card">
             <div class="skill-icon">⬡</div>
-            <h3>Backend</h3>
+            <h3>Database</h3>
             <ul class="tag-list">
-              <li>Node.js</li>
-              <li>Python</li>
-              <li>Go</li>
-              <li>REST</li>
-              <li>GraphQL</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>Redis</li>
+              <li>MongoDB</li>
+              <li>Elasticsearch</li>
             </ul>
           </div>
 
@@ -123,6 +125,7 @@
             <h3>DevOps</h3>
             <ul class="tag-list">
               <li>Docker</li>
+              <li>Kubernetes</li>
               <li>GitHub Actions</li>
               <li>Nginx</li>
               <li>Linux</li>
@@ -131,12 +134,13 @@
 
           <div class="skill-card">
             <div class="skill-icon">⬡</div>
-            <h3>Database</h3>
+            <h3>Architecture</h3>
             <ul class="tag-list">
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
-              <li>Redis</li>
-              <li>Prisma</li>
+              <li>Microservices</li>
+              <li>RabbitMQ / Kafka</li>
+              <li>REST / gRPC</li>
+              <li>JWT / OAuth2</li>
+              <li>DDD</li>
             </ul>
           </div>
 
@@ -155,76 +159,78 @@
             <div class="project-header">
               <span class="project-icon">◈</span>
               <div class="project-links">
-                <a href="#" aria-label="GitHub" class="icon-link">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-                <a href="#" aria-label="Live Demo" class="icon-link">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
+                <a href="#" aria-label="GitHub" class="icon-link"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                <a href="#" aria-label="Live Demo" class="icon-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
               </div>
             </div>
-            <h3 class="project-title">Cosmos Dashboard</h3>
-            <p class="project-desc">A real-time analytics dashboard built with React and D3.js, visualizing complex data streams with smooth animations and dark-mode-first design.</p>
-            <div class="project-tags">
-              <span>React</span><span>D3.js</span><span>Node.js</span><span>WebSocket</span>
-            </div>
+            <h3 class="project-title">Aurora Gateway</h3>
+            <p class="project-desc">High-performance API gateway on Spring Cloud Gateway. Handles JWT auth, token refresh, per-route rate limiting via Redis, Sentinel circuit breaking, and dynamic routing synced from Nacos — zero restarts required.</p>
+            <div class="project-tags"><span>Java</span><span>Spring Cloud</span><span>Redis</span><span>Nacos</span><span>Sentinel</span></div>
           </article>
 
           <article class="project-card">
             <div class="project-header">
               <span class="project-icon">◈</span>
               <div class="project-links">
-                <a href="#" aria-label="GitHub" class="icon-link">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-                <a href="#" aria-label="Live Demo" class="icon-link">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
+                <a href="#" aria-label="GitHub" class="icon-link"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                <a href="#" aria-label="Live Demo" class="icon-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
               </div>
             </div>
-            <h3 class="project-title">Nebula API</h3>
-            <p class="project-desc">A high-performance REST/GraphQL API gateway built with Go, featuring JWT auth, rate limiting, and automatic OpenAPI documentation generation.</p>
-            <div class="project-tags">
-              <span>Go</span><span>GraphQL</span><span>PostgreSQL</span><span>Docker</span>
-            </div>
+            <h3 class="project-title">Nebula MQ</h3>
+            <p class="project-desc">Reliable async messaging platform on Kafka. Features idempotent consumers, dead-letter queue with auto-retry, lag monitoring via Prometheus + Grafana, and a Spring Boot admin dashboard for topic management.</p>
+            <div class="project-tags"><span>Java</span><span>Kafka</span><span>Spring Boot</span><span>Prometheus</span><span>Docker</span></div>
           </article>
 
           <article class="project-card">
             <div class="project-header">
               <span class="project-icon">◈</span>
               <div class="project-links">
-                <a href="#" aria-label="GitHub" class="icon-link">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-                <a href="#" aria-label="Live Demo" class="icon-link">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
+                <a href="#" aria-label="GitHub" class="icon-link"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                <a href="#" aria-label="Live Demo" class="icon-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
               </div>
             </div>
             <h3 class="project-title">Starlog</h3>
-            <p class="project-desc">An open-source developer journal app with markdown support, tagging, and full-text search. Built with Next.js and deployed on the edge.</p>
-            <div class="project-tags">
-              <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>Vercel</span>
-            </div>
+            <p class="project-desc">Developer journal service with full-text search via Elasticsearch. Supports tag filtering, incremental MySQL sync through Canal, and a REST API built with Spring Boot + MyBatis-Plus, deployed via Docker Compose.</p>
+            <div class="project-tags"><span>Java</span><span>Elasticsearch</span><span>MyBatis</span><span>Canal</span><span>MySQL</span></div>
           </article>
 
           <article class="project-card">
             <div class="project-header">
               <span class="project-icon">◈</span>
               <div class="project-links">
-                <a href="#" aria-label="GitHub" class="icon-link">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-                <a href="#" aria-label="Live Demo" class="icon-link">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
+                <a href="#" aria-label="GitHub" class="icon-link"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                <a href="#" aria-label="Live Demo" class="icon-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
               </div>
             </div>
-            <h3 class="project-title">Orbit CLI</h3>
-            <p class="project-desc">A developer productivity CLI tool that automates common git workflows, generates changelogs, and integrates with GitHub Actions pipelines.</p>
-            <div class="project-tags">
-              <span>Python</span><span>Click</span><span>GitHub API</span><span>CI/CD</span>
+            <h3 class="project-title">Orbit Auth</h3>
+            <p class="project-desc">Unified auth service with OAuth2 Authorization Code + PKCE via Spring Security. Multi-tenant isolation, fine-grained RBAC, token introspection, and SSO across microservices backed by a shared Redis token store.</p>
+            <div class="project-tags"><span>Java</span><span>Spring Security</span><span>OAuth2</span><span>Redis</span><span>JWT</span></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-icon">◈</span>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub" class="icon-link"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                <a href="#" aria-label="Live Demo" class="icon-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+              </div>
             </div>
+            <h3 class="project-title">Pulsar Scheduler</h3>
+            <p class="project-desc">Distributed job scheduling engine for cron, delay, and one-shot tasks. Built on Spring Boot + XXL-Job with MySQL state persistence, optimistic locking for cluster-safe execution, and a REST API for dynamic job management.</p>
+            <div class="project-tags"><span>Java</span><span>XXL-Job</span><span>Spring Boot</span><span>MySQL</span><span>Docker</span></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-icon">◈</span>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub" class="icon-link"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                <a href="#" aria-label="Live Demo" class="icon-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+              </div>
+            </div>
+            <h3 class="project-title">Comet Config</h3>
+            <p class="project-desc">Lightweight distributed config center inspired by Apollo. Namespace isolation, gray-release, config versioning, and real-time push via long-polling. Spring Boot server with a Maven-published client SDK.</p>
+            <div class="project-tags"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>Kubernetes</span><span>gRPC</span></div>
           </article>
 
         </div>
@@ -237,18 +243,18 @@
         <h2 class="section-title centered">Get In Touch</h2>
         <p class="section-sub centered">Have a project in mind? Let's build something together.</p>
         <div class="contact-links">
-          <a href="mailto:hello@example.com" class="contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-            <span>hello@example.com</span>
+          <a href="mailto:linran754@gmail.com" class="contact-item">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg></span>
+            <span class="contact-label">linran754@gmail.com</span>
           </a>
           <a href="https://github.com/seesaws" target="_blank" rel="noopener" class="contact-item">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            <span>github.com/seesaws</span>
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></span>
+            <span class="contact-label">github.com/seesaws</span>
           </a>
-          <a href="https://linkedin.com/in/seesaws" target="_blank" rel="noopener" class="contact-item">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            <span>linkedin.com/in/seesaws</span>
-          </a>
+          <div class="contact-item contact-item--static">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M9.6 3C6.04 3 3 5.58 3 8.8c0 1.8.9 3.4 2.32 4.48l-.72 2.16 2.52-1.26c.76.22 1.56.34 2.38.34.24 0 .48-.01.72-.03A5.6 5.6 0 0 0 10 15.6C10 18.58 12.9 21 16.4 21c.7 0 1.38-.1 2-.28l2.1 1.05-.6-1.8A5.38 5.38 0 0 0 22 15.6c0-3.2-3.04-5.8-6.6-5.8-.22 0-.44.01-.66.03C14.46 7.1 12.28 3 9.6 3zm-2 4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4.8 5.6a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3.2 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg></span>
+            <span class="contact-label">WeChat: fadeself</span>
+          </div>
         </div>
       </div>
     </section>
