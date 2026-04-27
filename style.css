@@ -615,6 +615,11 @@ section { padding: var(--section-pad); }
   border: 1px solid var(--color-border);
 }
 
+.contact-icon i {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
 .contact-label {
   font-family: var(--font-mono);
   font-size: 0.78rem;
