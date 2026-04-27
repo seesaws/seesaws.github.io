@@ -2,8 +2,11 @@
 (function () {
   'use strict';
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // ===== initStarfield =====
   function initStarfield() {
+    if (prefersReducedMotion) return;
     const canvas = document.getElementById('starfield');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -14,7 +17,6 @@
     let meteors = [];
     let scrollY = 0;
     let mouseX = 0, mouseY = 0;
-    let animId;
 
     function resize() {
       canvas.width  = window.innerWidth;
@@ -111,7 +113,7 @@
       });
 
       ctx.globalAlpha = 1;
-      animId = requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
     }
 
     window.addEventListener('resize', () => { resize(); initStars(); });
@@ -120,7 +122,7 @@
 
     resize();
     initStars();
-    animId = requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
   }
 
   // ===== initTypewriter =====
@@ -128,10 +130,15 @@
     const el = document.getElementById('typewriter');
     if (!el) return;
 
+    if (prefersReducedMotion) {
+      el.textContent = 'Software Developer';
+      return;
+    }
+
     const phrases = [
-      'Full Stack Developer',
-      'Problem Solver',
-      'Distributed Systems Builder',
+      'Software Developer',
+      'Systems-Oriented Engineer',
+      'Platform Problem Solver',
       'Open Source Contributor',
     ];
 
@@ -198,6 +205,7 @@
 
   // ===== initParallax =====
   function initParallax() {
+    if (prefersReducedMotion) return;
     const els = document.querySelectorAll('[data-parallax]');
     if (!els.length) return;
 
@@ -214,6 +222,7 @@
 
   // ===== initCardTilt =====
   function initCardTilt() {
+    if (prefersReducedMotion) return;
     const cards = document.querySelectorAll('.project-card, .skill-card');
 
     cards.forEach(card => {
@@ -223,7 +232,7 @@
         const cy = rect.top  + rect.height / 2;
         const dx = (e.clientX - cx) / (rect.width  / 2);
         const dy = (e.clientY - cy) / (rect.height / 2);
-        card.style.transform = `translateY(-6px) rotateX(${-dy * 5}deg) rotateY(${dx * 5}deg)`;
+        card.style.transform = `translateY(-4px) rotateX(${-dy * 3}deg) rotateY(${dx * 3}deg)`;
       });
 
       card.addEventListener('mouseleave', () => {
@@ -263,7 +272,7 @@
         const target = document.querySelector(link.getAttribute('href'));
         if (target) {
           e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
+          target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
         }
       });
     });
